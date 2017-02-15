@@ -1,0 +1,125 @@
+* from pkb
+
+This package prints the accessible keymaps in a pretty format, i.e. so that
+bindings are listed as in a computer keyboard and grouped by
+base-keys. Currently the output is in html format.
+
+Short usage guide:
+Run: (pkb-html-save-keymap KEYMAP OUTPUT-FILE-NAME).
+
+Note about output: The html currently uses CSS 3, so it won't look good in older web browsers. Sorry.
+
+Customizing:
+The functions are designed so that the output can be extensively customized to
+adapt to the end-user's desires. Look at the help function for
+`pkb-html-save-keymap' for more info.
+
+Design philosophy:
+The package is actually split into two parts, pkb and pkb-output. The first part
+contains a set of functions that extract the key-bindings and assemble them into
+a useful format; the second part interfaces with pkb to turn the key-bindings
+into pretty output. Generally, the end-user will call a function in the second
+part. Currently, pkb-output = pkb-html, i.e. the output is in html. However,
+since much of the logic is contained separately in pkb, it shouldn't be to hard
+to edit the code to make, e.g. pk-latex, which would output in LaTeX format.
+
+Here is a slightly more explicit codification of the design philosophy: 
+1) If a task is sufficiently general that it would be useful for generating outputting in more than one format it should be placed as a function(s) in pkb rather than pkb-output.
+2) If there is a subtask in a function in pkb and different applications or users might reasonably want that subtask to behave in very different ways, that subtask may need to be split off as a separate function so that each application or user can perform that subtask according to his needs.
+  2a) It is OK if the new function (performing the mentioned subtask) is rather abstract or not entirely self-contained logically as long as splitting it off provides useful customization options. As a result, a function in pkb-output may need to call several functions in pkb to accomplish some task and may also need to stitch together low-level or intermediate data. This is OK.
+  2b) On the other hand, if all reasonable desired behaviors can be handled elegantly by passing an argument to the original function, the subpart does not need to be and should not be split off.
+
+Why this philosophy? I'm not entirely sure how to most usefully display the output. So I designed the underlying code to be very adaptable.
+
+To improve:
+1) Every keymap should be printed just once, even if it's accessible from more than one key-binding (and of course, all the key bindings to that keymap should link to it). If a keymap can be reached in more than one way, its title should reflect that fact.
+2) Appearance of output could be made much prettier. I haven't spent too much time on this.
+3) The current default settings are aimed at me and my keyboard. However, by customizing the various default variables (e.g. `pkb-include-base-key-list', `pkb-html-event-replace-bk', `pkb-key-groups', etc.) it should be fairly straightforward to adapt the code for different keyboards and/or users. In fact, it would probably be possible to set these settings by detecting some system variables.
+4) (technical issue) pkb-translate-... should be done before rather than during  `pkb-categorize-key-list' for conceptual simplicity
+
+The following are some abbreviations used in the comments and
+ help. An 's' suffix means plural, so that, e.g. "bks" is multiple "bk"'s
+"bk" = "base-key" - An unmodified event, like that given by `event-basic-type'.
+"mk" = "modified-key" - An event, possibly including modifiers,
+  e.g. 'C-A' or 'M-5'.
+"ks" = "key-sequence" - A series of keys equivalent to a single action in
+  emacs (e.g., I think, like [?\C-c ?x])
+"bind" = "key-binding" - The command bound to a key sequence.
+"pk" = "prefix-key"
+"root" - the kss in a keymap with no prefix-keys, e.g. 'A' or 'C-A' as
+ opposed to 'C-A A'.
+"mods-type" - a list of modifiers as returned by `event-modifiers',
+  e.g. (control alt).
+"options list" - a list that can specify how to print an object or other
+  pieces of information related to the object (e.g. as in BIND-OPTIONS
+  that accompanies a binding)
+
+The format of some of the arguments passed between functions:
+MKS - a list of ONE-MK's, each of which is of form
+   (MK MK-OPTIONS BIND . BIND-OPTIONS),
+ where MK-OPTIONS, BIND-OPTIONS can contains options about how to
+ print MK or BIND
+BKS-W-BINDS - a list of ONE-BK-W-BINDs, each of which is of the form
+   (BK BK-OPTIONS MODS-TYPE-W-BIND-1 ... MODS-TYPE-W-BIND-n),
+ where MODS-TYPE-W-BIND-i = (MODS-TYPE-i BIND-i . BIND-i-OPTIONS) and
+ MODS-TYPE is a list of modifiers as would be returned by
+ `event-modifiers'.
+BINDS-CHAR-TABLE is a char-table holding bindings. Its elements will
+ be of the form (MK-OPTIONS BIND . BIND-OPTIONS).
+BLOCKS-PRELIM - a list of ONE-BLOCK-PRELIMs, each of which is of type BKS-W-BINDS.
+BLOCKS - a list of ONE-BLOCKs, each of which is a list of the form
+  ( ('bks (BK-1 . BK-1-OPTIONS) ... (BK-n . BK-n-OPTIONS) )
+    (MODS-TYPE-1 BIND-W-OPT-1-1 ... BIND-W-OPT-1-n)
+    ...
+    (MODS-TYPE-m BIND-W-OPT-m-1 ... BIND-W-OPT-m-n)) ,
+ where a BIND-W-OPT is of the form (BIND . BIND-OPTIONS). Note that the
+ first element of a ONE-BLOCK is a row of base-keys (and actually
+ contains the symbol `bks') and is different from the following
+ elements.
+KEY-GROUPS is a list of the key-groups for a full keymap. A key-group or
+ ONE-KEY-GROUP is a list of the form
+  ( (group-name &optional NUM-FOR-FULL-GR OPTIONS) 
+    BKS-IN-ONE-BLOCK-1 ... BKS-IN-ONE-BLOCK-k),
+ where BKS-IN-ONE-BLOCK-i is a list of the form (BK-1 ... BK-n), i.e. a
+ list of the bks expected for ONE-BLOCK-i. NUM-FOR-FULL-GR gives the
+ number of base-keys that need to be defined for the group to be printed
+ as a full-gr; NUM-FOR-FULL-GR can be omitted. OPTIONS is intended for
+ additional group-specific options to be specified.
+A GROUPS list is a list of ONE-GROUPS. A ONE-GROUP is a list in one of
+ two forms:
+  1) ('full-gr (GROUP-NAME OPTIONS) . BLOCKS-PRELIM).
+  2) ('compact-gr (GROUP-NAME OPTIONS) . BKS-W-BINDS).
+
+* from pkb-output
+
+Short usage guide:
+ Run (pkb-html-save-keymap KEYMAP OUTPUT-FILE-NAME).
+
+See pkb.el for more design information
+
+Some data structures that come up:
+PK-OPTIONS, MK-OPTIONS, BK-OPTIONS, BIND-OPTIONS can be either a string
+ giving the printed form of the object (i.e. the mk, bk, or bind,
+ respectively) or an alist with key-value pairs (e.g. like (anchor-name
+ . "pk1"), where `anchor-name' is a symbol. Some of the meaningful
+ keys:
+  `outp-str': the string representation of the object for output
+  `replace-fl': if non-nil, `outp-str'-value will be matched against the
+    ...-REPLACE-... lists (e.g. EVENT-REPLACE-REGEXP). Otherwise, the
+    item won't be won't be matched against.
+  `class-list': a list of strings to be concatenated and placed in the
+    class tag in the cell containing the object.
+  `esc-map-fl' (PK-OPTIONS): If non-nil, the last key of this keymap's
+    key-sequence is an ESC, so that certain bindings should be ignored
+    because they are actually meta keys of the parent keymap
+  `anchor-name' (probably only PK-OPTIONS): Give the name for an html
+    anchor to be placed above the object
+ONE-GROUP-FOR-OUTPUT (like a ONE-GROUP) is of the form:
+  (TYPE-SYMB (GROUP-NAME OPTION) BLOCKS),
+ where TYPE-SYMB is either `full-gr' or `compact-gr'.
+
+(require 'pkb (concat
+	       (file-name-directory
+		(if load-file-name load-file-name buffer-file-name))
+	       "pkb-html-0.2.el"))
+

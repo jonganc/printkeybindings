@@ -1,0 +1,6 @@
+why does a main group with only like 13 keys get a full keymap?
+search-replace should keep searching until no more matches (instead of stopping after first matching; e.g. for tab-to-tab-stop)
+option to create blank bk (for formatting)
+option for bk to span columns (for formatting)
+credit Xah Lee
+do '<', '>' print properly?

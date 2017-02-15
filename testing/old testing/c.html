@@ -1,0 +1,448 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Global + Tex mode maps</title></head>
+<body>
+<h1>Global + Tex mode maps</h1>
+<div class="full-sect">
+<h2>Root</h2>
+<span class="full-gr">
+<h3>Main</h3>
+<table class="bk-table">
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>`</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>0</th><th>-</th><th>=</th><th>Backspace</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><span class="symb big2">&#x21D3;</span>-<span class="symb big1">&#x232B;</span>-char-untabify</td></tr>
+<tr class="mod-row mod-c"><th class="mod-cell">C</th><td></td><td><span class="symb big1">&#x2460;</span></td><td><span class="symb big1">&#x2460;</span></td><td><span class="symb big1">&#x2460;</span></td><td><span class="symb big1">&#x2460;</span></td><td><span class="symb big1">&#x2460;</span></td><td><span class="symb big1">&#x2460;</span></td><td><span class="symb big1">&#x2460;</span></td><td><span class="symb big1">&#x2460;</span></td><td><span class="symb big1">&#x2460;</span></td><td><span class="symb big1">&#x2460;</span></td><td>negative-argument</td><td></td><td><span class="symb big2">&#x21D3;</span>-<span class="symb big1">&#x2327;</span>-word</td></tr>
+<tr class="mod-row mod-C-S"><th class="mod-cell">C-S</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><span class="symb big1">&#x2327;</span>-whole-line</td></tr>
+<tr class="mod-row mod-m"><th class="mod-cell">M</th><td>tmm-menubar</td><td><span class="symb big1">&#x2460;</span></td><td><span class="symb big1">&#x2460;</span></td><td><span class="symb big1">&#x2460;</span></td><td><span class="symb big1">&#x2460;</span></td><td><span class="symb big1">&#x2460;</span></td><td><span class="symb big1">&#x2460;</span></td><td><span class="symb big1">&#x2460;</span></td><td><span class="symb big1">&#x2460;</span></td><td><span class="symb big1">&#x2460;</span></td><td><span class="symb big1">&#x2460;</span></td><td>negative-argument</td><td>count-lines-region</td><td><span class="symb big2">&#x21D3;</span>-<span class="symb big1">&#x2327;</span>-word</td></tr>
+<tr class="mod-row mod-c-m"><th class="mod-cell">C-M</th><td></td><td><span class="symb big1">&#x2460;</span></td><td><span class="symb big1">&#x2460;</span></td><td><span class="symb big1">&#x2460;</span></td><td><span class="symb big1">&#x2460;</span></td><td><span class="symb big1">&#x2460;</span></td><td><span class="symb big1">&#x2460;</span></td><td><span class="symb big1">&#x2460;</span></td><td><span class="symb big1">&#x2460;</span></td><td><span class="symb big1">&#x2460;</span></td><td><span class="symb big1">&#x2460;</span></td><td>negative-argument</td><td></td><td></td></tr>
+</span><tr class="between-blocks"><td colspan=15></td></tr>
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>~</th><th>!</th><th>@</th><th>#</th><th>$</th><th>%</th><th>^</th><th>&amp;</th><th>*</th><th>(</th><th>)</th><th>_</th><th>+</th></tr>
+<tr class="mod-row mod-c"><th class="mod-cell">C</th><td></td><td></td><td>set-mark-command</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>undo</td><td></td></tr>
+<tr class="mod-row mod-m"><th class="mod-cell">M</th><td>not-modified</td><td>shell-command</td><td>mark-word</td><td></td><td>ispell-word</td><td>query-replace</td><td><span class="symb big1">&#x232B;</span>-indentation</td><td>async-shell-command</td><td>pop-tag-mark</td><td>insert-parentheses</td><td>move-past-close-and-reindent</td><td></td><td></td></tr>
+<tr class="mod-row mod-c-m"><th class="mod-cell">C-M</th><td></td><td></td><td>mark-sexp</td><td></td><td></td><td>query-replace-regexp</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</span><tr class="between-blocks"><td colspan=14></td><td class="overhang" colspan=3></td></tr>
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>q</th><th>w</th><th>e</th><th>r</th><th>t</th><th>y</th><th>u</th><th>i</th><th>o</th><th>p</th><th>[</th><th>]</th><th>&#92;</th><th>{</th><th>}</th><th>|</th></tr>
+<tr class="mod-row mod-c"><th class="mod-cell">C</th><td>quoted-insert</td><td><span class="symb big1">&#x2327;</span>-region</td><td>move-end-of-line</td><td>isearch-<span class="symb big2">&#x21D3;</span></td><td>transpose-chars</td><td>yank</td><td>universal-argument</td><td>indent-for-<span class="symb big1">&#x21B9;</span>-command</td><td>open-line</td><td><span class="symb big1">&#x27F8;</span>-line</td><td class="keymap"><a href="#pk-22">keymap</a></td><td>abort-recursive-edit</td><td>toggle-input-method</td><td></td><td></td><td></td></tr>
+<tr class="mod-row mod-m"><th class="mod-cell">M</th><td>fill-<span class="symb big1">&#x00B6;</span></td><td><span class="symb big1">&#x2327;</span>-ring-save</td><td><span class="symb big2">&#x21D1;</span>-sentence</td><td>move-to-window-line-top-bottom</td><td>transpose-words</td><td>yank-pop</td><td>upcase-word</td><td><span class="symb big1">&#x21B9;</span>-to-tab-stop</td><td class="keymap">facemenu-keymap</td><td></td><td></td><td></td><td><span class="symb big1">&#x232B;</span>-horizontal-space</td><td><span class="symb big2">&#x21D3;</span>-<span class="symb big1">&#x00B6;</span></td><td><span class="symb big2">&#x21D1;</span>-<span class="symb big1">&#x00B6;</span></td><td>shell-command-on-region</td></tr>
+<tr class="mod-row mod-c-m"><th class="mod-cell">C-M</th><td>indent-pp-sexp</td><td>append-<span class="symb big1">&#x27F9;</span>-<span class="symb big1">&#x2327;</span></td><td>end-of-defun</td><td>isearch-<span class="symb big2">&#x21D3;</span>-regexp</td><td>transpose-sexps</td><td></td><td><span class="symb big2">&#x21D3;</span>-up-list</td><td>completion-at-point</td><td>split-line</td><td><span class="symb big2">&#x21D3;</span>-list</td><td class="keymap">keymap</td><td></td><td>indent-region</td><td></td><td></td><td></td></tr>
+</span><tr class="between-blocks"><td colspan=17></td></tr>
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>a</th><th>s</th><th>d</th><th>f</th><th>g</th><th>h</th><th>j</th><th>k</th><th>l</th><th>;</th><th>&#39;</th><th>:</th><th>&quot;</th><th>Return</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>newline</td></tr>
+<tr class="mod-row mod-c"><th class="mod-cell">C</th><td>move-beginning-of-line</td><td>isearch-<span class="symb big2">&#x21D1;</span></td><td><span class="symb big1">&#x232B;</span>-char</td><td><span class="symb big2">&#x21D1;</span>-char</td><td>keyboard-quit</td><td class="keymap"><a href="#pk-21">help-command</a></td><td>newline-and-indent</td><td><span class="symb big1">&#x2327;</span>-line</td><td>recenter-top-bottom</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="mod-row mod-m"><th class="mod-cell">M</th><td><span class="symb big2">&#x21D3;</span>-sentence</td><td class="keymap">keymap</td><td><span class="symb big1">&#x2327;</span>-word</td><td><span class="symb big2">&#x21D1;</span>-word</td><td class="keymap">keymap</td><td>mark-<span class="symb big1">&#x00B6;</span></td><td>indent-new-comment-line</td><td><span class="symb big1">&#x2327;</span>-sentence</td><td>downcase-word</td><td>comment-dwim</td><td>abbrev-prefix-mark</td><td>eval-expression</td><td></td><td></td></tr>
+<tr class="mod-row mod-c-m"><th class="mod-cell">C-M</th><td>beginning-of-defun</td><td>isearch-<span class="symb big2">&#x21D1;</span>-regexp</td><td>down-list</td><td><span class="symb big2">&#x21D1;</span>-sexp</td><td></td><td>mark-defun</td><td>indent-new-comment-line</td><td><span class="symb big1">&#x2327;</span>-sexp</td><td>reposition-window</td><td></td><td></td><td></td><td></td><td></td></tr>
+</span><tr class="between-blocks"><td colspan=15></td></tr>
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>z</th><th>x</th><th>c</th><th>v</th><th>b</th><th>n</th><th>m</th><th>,</th><th>.</th><th>/</th><th></th><th></th><th>?</th><th>SPC</th></tr>
+<tr class="mod-row mod-c"><th class="mod-cell">C</th><td>suspend-frame</td><td class="keymap"><a href="#pk-20">Control-X-prefix</a></td><td class="keymap"><a href="#pk-23">keymap</a></td><td>scroll-up</td><td><span class="symb big2">&#x21D3;</span>-char</td><td><span class="symb big1">&#x27F9;</span>-line</td><td>newline</td><td></td><td></td><td>undo</td><td></td><td></td><td></td><td>set-mark-command</td></tr>
+<tr class="mod-row mod-m"><th class="mod-cell">M</th><td>zap-to-char</td><td>execute-extended-command</td><td>capitalize-word</td><td>scroll-down</td><td><span class="symb big2">&#x21D3;</span>-word</td><td></td><td>back-to-indentation</td><td>tags-loop-continue</td><td>find-tag</td><td>dabbrev-expand</td><td>beginning-of-buffer</td><td>end-of-buffer</td><td></td><td>just-one-space</td></tr>
+<tr class="mod-row mod-c-m"><th class="mod-cell">C-M</th><td></td><td>eval-defun</td><td>exit-recursive-edit</td><td>scroll-other-window</td><td><span class="symb big2">&#x21D3;</span>-sexp</td><td><span class="symb big2">&#x21D1;</span>-list</td><td></td><td></td><td>find-tag-regexp</td><td>dabbrev-completion</td><td></td><td></td><td></td><td>mark-sexp</td></tr>
+<tr class="mod-row mod-S-C-M"><th class="mod-cell">S-C-M</th><td></td><td></td><td></td><td>scroll-other-window-down</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</span></table></span>
+<span class="compact-gr">
+<h3>Function keys</h3>
+<table class="bk-table">
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>ESC</th><th>F1</th><th>F2</th><th>F3</th><th>F4</th><th>F5</th><th>F6</th><th>F10</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td class="keymap"><a href="#pk-22">keymap</a></td><td class="keymap">help-command</td><td class="keymap"><a href="#pk-17">2C-command</a></td><td>kmacro-start-macro-or-insert-counter</td><td>kmacro-end-or-call-macro</td><td class="keymap"><a href="#pk-19">keymap</a></td><td>imenu</td><td>menu-bar-open</td></tr>
+<tr class="mod-row mod-m"><th class="mod-cell">M</th><td class="keymap">keymap</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</span></table></span>
+<span class="full-gr">
+<h3>Miscellaneous keys</h3>
+<table class="bk-table">
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>Scroll_Lock</th><th>pause</th><th>Insert</th><th>Delete</th><th>Home</th><th>PgUp</th><th>Next</th><th>End</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td></td><td></td><td>overwrite-mode</td><td></td><td>move-beginning-of-line</td><td>scroll-down</td><td>scroll-up</td><td>move-end-of-line</td></tr>
+<tr class="mod-row mod-s"><th class="mod-cell">S</th><td></td><td></td><td>yank</td><td><span class="symb big1">&#x2327;</span>-region</td><td></td><td></td><td></td><td></td></tr>
+<tr class="mod-row mod-c"><th class="mod-cell">C</th><td></td><td></td><td><span class="symb big1">&#x2327;</span>-ring-save</td><td><span class="symb big1">&#x2327;</span>-word</td><td>beginning-of-buffer</td><td>scroll-right</td><td>scroll-left</td><td>end-of-buffer</td></tr>
+<tr class="mod-row mod-m"><th class="mod-cell">M</th><td></td><td></td><td></td><td><span class="symb big2">&#x21D3;</span>-<span class="symb big1">&#x2327;</span>-word</td><td>beginning-of-buffer-other-window</td><td>scroll-other-window-down</td><td>scroll-other-window</td><td>end-of-buffer-other-window</td></tr>
+<tr class="mod-row mod-M-C"><th class="mod-cell">M-C</th><td></td><td></td><td></td><td></td><td>beginning-of-defun</td><td></td><td></td><td>end-of-defun</td></tr>
+</span><tr class="between-blocks"><td colspan=9></td></tr>
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th><span class="symb big2">&#x27F5;</span></th><th><span class="symb big2">&#x27F6;</span></th><th><span class="symb big2">&#x2191;</span></th><th><span class="symb big2">&#x2193;</span></th><th>lwindow</th><th>rwindow</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td><span class="symb big2">&#x21D3;</span>-char</td><td><span class="symb big2">&#x21D1;</span>-char</td><td><span class="symb big1">&#x27F8;</span>-line</td><td><span class="symb big1">&#x27F9;</span>-line</td><td>ignore</td><td>ignore</td></tr>
+<tr class="mod-row mod-c"><th class="mod-cell">C</th><td><span class="symb big2">&#x21D3;</span>-word</td><td><span class="symb big2">&#x21D1;</span>-word</td><td><span class="symb big2">&#x21D3;</span>-<span class="symb big1">&#x00B6;</span></td><td><span class="symb big2">&#x21D1;</span>-<span class="symb big1">&#x00B6;</span></td><td></td><td></td></tr>
+<tr class="mod-row mod-m"><th class="mod-cell">M</th><td><span class="symb big2">&#x21D3;</span>-word</td><td><span class="symb big2">&#x21D1;</span>-word</td><td></td><td></td><td></td><td></td></tr>
+<tr class="mod-row mod-M-C"><th class="mod-cell">M-C</th><td><span class="symb big2">&#x21D3;</span>-sexp</td><td><span class="symb big2">&#x21D1;</span>-sexp</td><td><span class="symb big2">&#x21D3;</span>-up-list</td><td>down-list</td><td></td><td></td></tr>
+</span></table></span>
+<span class="compact-gr">
+<h3>Mouse events</h3>
+<table class="bk-table">
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>mouse-1</th><th>mouse-2</th><th>mouse-3</th><th>wheel-<span class="symb big2">&#x2193;</span></th><th>wheel-<span class="symb big2">&#x2191;</span></th></tr>
+<tr class="mod-row mod-click"><th class="mod-cell">click</th><td>mouse-set-point</td><td>mouse-do-nothing</td><td>mouse-save-then-<span class="symb big1">&#x2327;</span></td><td>mwheel-scroll</td><td>mwheel-scroll</td></tr>
+<tr class="mod-row mod-S-click"><th class="mod-cell">S-click</th><td></td><td></td><td>kmacro-end-call-mouse</td><td>mwheel-scroll</td><td>mwheel-scroll</td></tr>
+<tr class="mod-row mod-C-click"><th class="mod-cell">C-click</th><td></td><td></td><td></td><td>mwheel-scroll</td><td>mwheel-scroll</td></tr>
+<tr class="mod-row mod-M-click"><th class="mod-cell">M-click</th><td>mouse-start-secondary</td><td>mouse-yank-secondary</td><td>mouse-secondary-save-then-<span class="symb big1">&#x2327;</span></td><td></td><td></td></tr>
+<tr class="mod-row mod-down"><th class="mod-cell">down</th><td>mouse-drag-region</td><td></td><td>imenu</td><td></td><td></td></tr>
+<tr class="mod-row mod-S-down"><th class="mod-cell">S-down</th><td>mouse-appearance-menu</td><td></td><td></td><td></td><td></td></tr>
+<tr class="mod-row mod-C-down"><th class="mod-cell">C-down</th><td>mouse-buffer-menu</td><td class="keymap"><a href="#pk-18">facemenu-menu</a></td><td class="keymap">keymap</td><td></td><td></td></tr>
+<tr class="mod-row mod-M-down"><th class="mod-cell">M-down</th><td>mouse-drag-secondary</td><td></td><td></td><td></td><td></td></tr>
+<tr class="mod-row mod-double"><th class="mod-cell">double</th><td>mouse-set-point</td><td></td><td></td><td></td><td></td></tr>
+<tr class="mod-row mod-drag"><th class="mod-cell">drag</th><td>mouse-set-region</td><td></td><td></td><td></td><td></td></tr>
+<tr class="mod-row mod-M-drag"><th class="mod-cell">M-drag</th><td>mouse-set-secondary</td><td></td><td></td><td></td><td></td></tr>
+<tr class="mod-row mod-triple"><th class="mod-cell">triple</th><td>mouse-set-point</td><td></td><td></td><td></td><td></td></tr>
+</span></table></span>
+</div>
+
+<hr>
+<div class="simple-sect"><div class="simple-sect">
+<a name="pk-17"><h2>&lt;f2&gt;</h2></a>
+<table>
+<tr><th>2</th><td>2C-two-columns</td><td class="col-sep">&nbsp;</td><th>s</th><td>2C-split</td></tr>
+<tr><th>b</th><td>2C-associate-buffer</td><td class="col-sep">&nbsp;</td><th>F2</th><td>2C-two-columns</td></tr>
+</table>
+</div>
+
+<hr>
+<div class="simple-sect"><div class="simple-sect">
+<a name="pk-19"><h2>&lt;f5&gt;</h2></a>
+<table>
+<tr><th>1</th><td>bookmark-set</td><td class="col-sep">&nbsp;</td><th>3</th><td>bookmark-menu-list</td></tr>
+<tr><th>2</th><td>bookmark-jump</td><td class="col-sep" colspan=3></td></tr>
+</table>
+</div>
+
+<hr>
+<div class="simple-sect"><div class="simple-sect">
+<a name="pk-22"><h2>ESC</h2></a>
+<table>
+<tr><th>TAB</th><td>completion-at-point</td><td class="col-sep">&nbsp;</td><th>C-x</th><td>eval-defun</td></tr>
+<tr><th>C-q</th><td>indent-pp-sexp</td><td class="col-sep" colspan=3></td></tr>
+</table>
+</div>
+
+<hr>
+<div class="simple-sect"><div class="simple-sect">
+<a name="pk-23"><h2>C-c</h2></a>
+<table>
+<tr><th>a</th><td>escape-html-skel</td><td class="col-sep">&nbsp;</td><th>v</th><td>elisp-debug-princvar</td></tr>
+<tr><th>d</th><td>duplicate-line</td><td class="col-sep" colspan=3></td></tr>
+</table>
+</div>
+
+<hr>
+<div class="full-sect">
+<a name="pk-21"><h2>C-h</h2></a>
+<span class="full-gr">
+<h3>Main</h3>
+<table class="bk-table">
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>`</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>0</th><th>-</th><th>=</th><th>Backspace</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td></td><td></td><td></td><td></td><td class="keymap"><a href="#pk-16">keymap</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</span><tr class="between-blocks"><td colspan=15></td></tr>
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>~</th><th>!</th><th>@</th><th>#</th><th>$</th><th>%</th><th>^</th><th>&amp;</th><th>*</th><th>(</th><th>)</th><th>_</th><th>+</th></tr>
+</span><tr class="between-blocks"><td colspan=14></td><td class="overhang" colspan=3></td></tr>
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>q</th><th>w</th><th>e</th><th>r</th><th>t</th><th>y</th><th>u</th><th>i</th><th>o</th><th>p</th><th>[</th><th>]</th><th>&#92;</th><th>{</th><th>}</th><th>|</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td>help-quit</td><td>where-is</td><td>view-echo-area-messages</td><td>info-emacs-manual</td><td>help-with-tutorial</td><td></td><td></td><td>info</td><td></td><td>finder-by-keyword</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="mod-row mod-s"><th class="mod-cell">S</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>describe-input-method</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="mod-row mod-c"><th class="mod-cell">C</th><td></td><td>describe-no-warranty</td><td>view-external-packages</td><td></td><td>view-emacs-todo</td><td></td><td></td><td></td><td>describe-distribution</td><td>view-emacs-problems</td><td></td><td></td><td>describe-input-method</td><td></td><td></td><td></td></tr>
+</span><tr class="between-blocks"><td colspan=17></td></tr>
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>a</th><th>s</th><th>d</th><th>f</th><th>g</th><th>h</th><th>j</th><th>k</th><th>l</th><th>;</th><th>&#39;</th><th>:</th><th>&quot;</th><th>Return</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td>apropos-command</td><td>describe-syntax</td><td>apropos-documentation</td><td>describe-function</td><td>describe-gnu-project</td><td>view-hello-file</td><td></td><td>describe-key</td><td>view-lossage</td><td></td><td></td><td></td><td></td><td>view-order-manuals</td></tr>
+<tr class="mod-row mod-s"><th class="mod-cell">S</th><td></td><td>info-lookup-symbol</td><td></td><td>Info-goto-emacs-command-node</td><td></td><td></td><td></td><td>Info-goto-emacs-key-command-node</td><td>describe-language-environment</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="mod-row mod-c"><th class="mod-cell">C</th><td>about-emacs</td><td></td><td>view-emacs-debugging</td><td>view-emacs-FAQ</td><td></td><td>help-for-help</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</span><tr class="between-blocks"><td colspan=15></td></tr>
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>z</th><th>x</th><th>c</th><th>v</th><th>b</th><th>n</th><th>m</th><th>,</th><th>.</th><th>/</th><th></th><th></th><th>?</th><th>SPC</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td></td><td></td><td>describe-key-briefly</td><td>describe-variable</td><td>describe-bindings</td><td>view-emacs-news</td><td>describe-mode</td><td></td><td>display-local-help</td><td></td><td></td><td></td><td>help-for-help</td><td></td></tr>
+<tr class="mod-row mod-s"><th class="mod-cell">S</th><td></td><td></td><td>describe-coding-system</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="mod-row mod-c"><th class="mod-cell">C</th><td></td><td></td><td>describe-copying</td><td></td><td></td><td>view-emacs-news</td><td>view-order-manuals</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</span></table></span>
+<span class="compact-gr">
+<h3>Function keys</h3>
+<table class="bk-table">
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>F1</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td>help-for-help</td></tr>
+</span></table></span>
+</div>
+
+<hr>
+<div class="simple-sect"><div class="simple-sect">
+<a name="pk-16"><h2>C-h 4</h2></a>
+<table>
+<tr><th>i</th><td>info-other-window</td></tr>
+</table>
+</div>
+
+<hr>
+<div class="full-sect">
+<a name="pk-20"><h2>C-x</h2></a>
+<span class="full-gr">
+<h3>Main</h3>
+<table class="bk-table">
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>`</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>0</th><th>-</th><th>=</th><th>Backspace</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td><span class="symb big1">&#x27F9;</span>-error</td><td><span class="symb big1">&#x232B;</span>-other-windows</td><td>split-window-vertically</td><td>split-window-horizontally</td><td class="keymap"><a href="#pk-12">ctl-x-4-prefix</a></td><td class="keymap"><a href="#pk-11">ctl-x-5-prefix</a></td><td class="keymap"><a href="#pk-10">2C-command</a></td><td></td><td class="keymap"><a href="#pk-9">keymap</a></td><td></td><td><span class="symb big1">&#x232B;</span>-window</td><td>shrink-window-if-larger-than-buffer</td><td>what-cursor-position</td><td><span class="symb big2">&#x21D3;</span>-<span class="symb big1">&#x2327;</span>-sentence</td></tr>
+<tr class="mod-row mod-c"><th class="mod-cell">C</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>text-scale-adjust</td><td>text-scale-adjust</td><td>text-scale-adjust</td><td></td></tr>
+</span><tr class="between-blocks"><td colspan=15></td></tr>
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>~</th><th>!</th><th>@</th><th>#</th><th>$</th><th>%</th><th>^</th><th>&amp;</th><th>*</th><th>(</th><th>)</th><th>_</th><th>+</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td></td><td></td><td></td><td></td><td>set-selective-display</td><td></td><td>enlarge-window</td><td></td><td>calc-dispatch</td><td>kmacro-start-macro</td><td>kmacro-end-macro</td><td></td><td>balance-windows</td></tr>
+<tr class="mod-row mod-c"><th class="mod-cell">C</th><td></td><td></td><td>pop-global-mark</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>text-scale-adjust</td></tr>
+</span><tr class="between-blocks"><td colspan=14></td><td class="overhang" colspan=3></td></tr>
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>q</th><th>w</th><th>e</th><th>r</th><th>t</th><th>y</th><th>u</th><th>i</th><th>o</th><th>p</th><th>[</th><th>]</th><th>&#92;</th><th>{</th><th>}</th><th>|</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td>kbd-macro-query</td><td></td><td>kmacro-end-and-call-macro</td><td class="keymap"><a href="#pk-5">keymap</a></td><td></td><td></td><td>undo</td><td>insert-file</td><td>other-window</td><td></td><td><span class="symb big2">&#x21D3;</span>-page</td><td><span class="symb big2">&#x21D1;</span>-page</td><td></td><td>shrink-window-horizontally</td><td>enlarge-window-horizontally</td><td></td></tr>
+<tr class="mod-row mod-c"><th class="mod-cell">C</th><td>toggle-read-only</td><td>write-file</td><td>eval-last-sexp</td><td>find-file-read-only</td><td>transpose-lines</td><td></td><td>upcase-region</td><td>indent-rigidly</td><td><span class="symb big1">&#x232B;</span>-blank-lines</td><td>mark-page</td><td class="keymap"><a href="#pk-13">keymap</a></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="mod-row mod-c-m"><th class="mod-cell">C-M</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>repeat-complex-command</td><td></td><td></td><td></td><td></td><td></td></tr>
+</span><tr class="between-blocks"><td colspan=17></td></tr>
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>a</th><th>s</th><th>d</th><th>f</th><th>g</th><th>h</th><th>j</th><th>k</th><th>l</th><th>;</th><th>&#39;</th><th>:</th><th>&quot;</th><th>Return</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td class="keymap"><a href="#pk-7">keymap</a></td><td>save-some-buffers</td><td>dired</td><td>set-fill-column</td><td></td><td>mark-whole-buffer</td><td></td><td><span class="symb big1">&#x2327;</span>-buffer</td><td>count-lines-page</td><td>comment-set-column</td><td>expand-abbrev</td><td></td><td></td><td class="keymap"><a href="#pk-14">keymap</a></td></tr>
+<tr class="mod-row mod-c"><th class="mod-cell">C</th><td></td><td>save-buffer</td><td>list-directory</td><td>find-file</td><td></td><td></td><td></td><td class="keymap"><a href="#pk-15">kmacro-keymap</a></td><td>downcase-region</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="mod-row mod-m"><th class="mod-cell">M</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>repeat-complex-command</td><td></td><td></td></tr>
+</span><tr class="between-blocks"><td colspan=15></td></tr>
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>z</th><th>x</th><th>c</th><th>v</th><th>b</th><th>n</th><th>m</th><th>,</th><th>.</th><th>/</th><th></th><th></th><th>?</th><th>SPC</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td>repeat</td><td></td><td></td><td class="keymap"><a href="#pk-4">vc-prefix-map</a></td><td>switch-to-buffer</td><td class="keymap"><a href="#pk-6">keymap</a></td><td>compose-mail</td><td></td><td>set-fill-prefix</td><td></td><td>scroll-left</td><td>scroll-right</td><td></td><td></td></tr>
+<tr class="mod-row mod-s"><th class="mod-cell">S</th><td></td><td class="keymap"><a href="#pk-8">keymap</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="mod-row mod-c"><th class="mod-cell">C</th><td>suspend-frame</td><td>exchange-point-and-mark</td><td>save-buffers-<span class="symb big1">&#x2327;</span>-terminal</td><td>find-alternate-file</td><td>list-buffers</td><td>set-goal-column</td><td class="keymap"><a href="#pk-14">keymap</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td>pop-global-mark</td></tr>
+</span></table></span>
+<span class="compact-gr">
+<h3>Function keys</h3>
+<table class="bk-table">
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>ESC</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td class="keymap"><a href="#pk-13">keymap</a></td></tr>
+<tr class="mod-row mod-m"><th class="mod-cell">M</th><td>repeat-complex-command</td></tr>
+</span></table></span>
+<span class="compact-gr">
+<h3>Miscellaneous keys</h3>
+<table class="bk-table">
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th><span class="symb big2">&#x27F5;</span></th><th><span class="symb big2">&#x27F6;</span></th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td><span class="symb big1">&#x27F8;</span>-buffer</td><td><span class="symb big1">&#x27F9;</span>-buffer</td></tr>
+<tr class="mod-row mod-c"><th class="mod-cell">C</th><td><span class="symb big1">&#x27F8;</span>-buffer</td><td><span class="symb big1">&#x27F9;</span>-buffer</td></tr>
+</span></table></span>
+</div>
+
+<hr>
+<div class="compact-sect"><div class="compact-sect">
+<a name="pk-12"><h2>C-x 4</h2></a>
+<table class="bk-table">
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>.</th><th>0</th><th>a</th><th>b</th><th>c</th><th>d</th><th>f</th><th>m</th><th>o</th><th>r</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td>find-tag-other-window</td><td><span class="symb big1">&#x2327;</span>-buffer-and-window</td><td>add-change-log-entry-other-window</td><td>switch-to-buffer-other-window</td><td>clone-indirect-buffer-other-window</td><td>dired-other-window</td><td>find-file-other-window</td><td>compose-mail-other-window</td><td></td><td>find-file-read-only-other-window</td></tr>
+<tr class="mod-row mod-c"><th class="mod-cell">C</th><td></td><td></td><td></td><td></td><td></td><td></td><td>find-file-other-window</td><td></td><td>display-buffer</td><td></td></tr>
+</span></table></div>
+
+<hr>
+<div class="compact-sect"><div class="compact-sect">
+<a name="pk-11"><h2>C-x 5</h2></a>
+<table class="bk-table">
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>.</th><th>0</th><th>1</th><th>2</th><th>b</th><th>d</th><th>f</th><th>m</th><th>o</th><th>r</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td>find-tag-other-frame</td><td><span class="symb big1">&#x232B;</span>-frame</td><td><span class="symb big1">&#x232B;</span>-other-frames</td><td>make-frame-command</td><td>switch-to-buffer-other-frame</td><td>dired-other-frame</td><td>find-file-other-frame</td><td>compose-mail-other-frame</td><td>other-frame</td><td>find-file-read-only-other-frame</td></tr>
+<tr class="mod-row mod-c"><th class="mod-cell">C</th><td></td><td></td><td></td><td></td><td></td><td></td><td>find-file-other-frame</td><td></td><td>display-buffer-other-frame</td><td></td></tr>
+</span></table></div>
+
+<hr>
+<div class="simple-sect"><div class="simple-sect">
+<a name="pk-10"><h2>C-x 6</h2></a>
+<table>
+<tr><th>2</th><td>2C-two-columns</td><td class="col-sep">&nbsp;</td><th>s</th><td>2C-split</td></tr>
+<tr><th>b</th><td>2C-associate-buffer</td><td class="col-sep">&nbsp;</td><th>F2</th><td>2C-two-columns</td></tr>
+</table>
+</div>
+
+<hr>
+<div class="simple-sect"><div class="simple-sect">
+<a name="pk-9"><h2>C-x 8</h2></a>
+<table>
+<tr><th>Return</th><td>ucs-insert</td><td class="col-sep">&nbsp;</td><th>RET</th><td>ucs-insert</td></tr>
+</table>
+</div>
+
+<hr>
+<div class="compact-sect"><div class="compact-sect">
+<a name="pk-7"><h2>C-x a</h2></a>
+<table class="bk-table">
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>&#39;</th><th>+</th><th>-</th><th>a</th><th>e</th><th>g</th><th>i</th><th>l</th><th>n</th><th>p</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td>expand-abbrev</td><td>add-mode-abbrev</td><td>inverse-add-global-abbrev</td><td></td><td>expand-abbrev</td><td>add-global-abbrev</td><td class="keymap"><a href="#pk-0">keymap</a></td><td>add-mode-abbrev</td><td>expand-jump-to-<span class="symb big1">&#x27F9;</span>-slot</td><td>expand-jump-to-<span class="symb big1">&#x27F8;</span>-slot</td></tr>
+<tr class="mod-row mod-c"><th class="mod-cell">C</th><td></td><td></td><td></td><td>add-mode-abbrev</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</span></table></div>
+
+<hr>
+<div class="simple-sect"><div class="simple-sect">
+<a name="pk-0"><h2>C-x a i</h2></a>
+<table>
+<tr><th>g</th><td>inverse-add-global-abbrev</td><td class="col-sep">&nbsp;</td><th>l</th><td>inverse-add-mode-abbrev</td></tr>
+</table>
+</div>
+
+<hr>
+<div class="simple-sect"><div class="simple-sect">
+<a name="pk-6"><h2>C-x n</h2></a>
+<table>
+<tr><th>d</th><td>narrow-to-defun</td><td class="col-sep">&nbsp;</td><th>p</th><td>narrow-to-page</td></tr>
+<tr><th>n</th><td>narrow-to-region</td><td class="col-sep">&nbsp;</td><th>w</th><td>widen</td></tr>
+</table>
+</div>
+
+<hr>
+<div class="full-sect">
+<a name="pk-5"><h2>C-x r</h2></a>
+<span class="full-gr">
+<h3>Main</h3>
+<table class="bk-table">
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>`</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>0</th><th>-</th><th>=</th><th>Backspace</th></tr>
+</span><tr class="between-blocks"><td colspan=15></td></tr>
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>~</th><th>!</th><th>@</th><th>#</th><th>$</th><th>%</th><th>^</th><th>&amp;</th><th>*</th><th>(</th><th>)</th><th>_</th><th>+</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>increment-register</td></tr>
+<tr class="mod-row mod-c"><th class="mod-cell">C</th><td></td><td></td><td>point-to-register</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</span><tr class="between-blocks"><td colspan=14></td><td class="overhang" colspan=3></td></tr>
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>q</th><th>w</th><th>e</th><th>r</th><th>t</th><th>y</th><th>u</th><th>i</th><th>o</th><th>p</th><th>[</th><th>]</th><th>&#92;</th><th>{</th><th>}</th><th>|</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td></td><td>window-configuration-to-register</td><td></td><td>copy-rectangle-to-register</td><td>string-rectangle</td><td>yank-rectangle</td><td></td><td>insert-register</td><td>open-rectangle</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</span><tr class="between-blocks"><td colspan=17></td></tr>
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>a</th><th>s</th><th>d</th><th>f</th><th>g</th><th>h</th><th>j</th><th>k</th><th>l</th><th>;</th><th>&#39;</th><th>:</th><th>&quot;</th><th>Return</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td></td><td>copy-to-register</td><td><span class="symb big1">&#x232B;</span>-rectangle</td><td>frame-configuration-to-register</td><td>insert-register</td><td></td><td>jump-to-register</td><td><span class="symb big1">&#x2327;</span>-rectangle</td><td>bookmark-bmenu-list</td><td></td><td></td><td></td><td></td><td></td></tr>
+</span><tr class="between-blocks"><td colspan=15></td></tr>
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>z</th><th>x</th><th>c</th><th>v</th><th>b</th><th>n</th><th>m</th><th>,</th><th>.</th><th>/</th><th></th><th></th><th>?</th><th>SPC</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td></td><td>copy-to-register</td><td>clear-rectangle</td><td></td><td>bookmark-jump</td><td>number-to-register</td><td>bookmark-set</td><td></td><td></td><td></td><td></td><td></td><td></td><td>point-to-register</td></tr>
+<tr class="mod-row mod-c"><th class="mod-cell">C</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>point-to-register</td></tr>
+</span></table></span>
+</div>
+
+<hr>
+<div class="full-sect">
+<a name="pk-4"><h2>C-x v</h2></a>
+<span class="full-gr">
+<h3>Main</h3>
+<table class="bk-table">
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>`</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>0</th><th>-</th><th>=</th><th>Backspace</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>vc-diff</td><td></td></tr>
+</span><tr class="between-blocks"><td colspan=15></td></tr>
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>~</th><th>!</th><th>@</th><th>#</th><th>$</th><th>%</th><th>^</th><th>&amp;</th><th>*</th><th>(</th><th>)</th><th>_</th><th>+</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td>vc-revision-other-window</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>vc-update</td></tr>
+</span><tr class="between-blocks"><td colspan=14></td><td class="overhang" colspan=3></td></tr>
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>q</th><th>w</th><th>e</th><th>r</th><th>t</th><th>y</th><th>u</th><th>i</th><th>o</th><th>p</th><th>[</th><th>]</th><th>&#92;</th><th>{</th><th>}</th><th>|</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td></td><td></td><td></td><td>vc-retrieve-tag</td><td></td><td></td><td>vc-revert</td><td>vc-register</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</span><tr class="between-blocks"><td colspan=17></td></tr>
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>a</th><th>s</th><th>d</th><th>f</th><th>g</th><th>h</th><th>j</th><th>k</th><th>l</th><th>;</th><th>&#39;</th><th>:</th><th>&quot;</th><th>Return</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td>vc-update-change-log</td><td>vc-create-tag</td><td>vc-dir</td><td></td><td>vc-annotate</td><td>vc-insert-headers</td><td></td><td></td><td>vc-print-log</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="mod-row mod-s"><th class="mod-cell">S</th><td></td><td></td><td>vc-root-diff</td><td></td><td></td><td></td><td></td><td></td><td>vc-print-root-log</td><td></td><td></td><td></td><td></td><td></td></tr>
+</span><tr class="between-blocks"><td colspan=15></td></tr>
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>z</th><th>x</th><th>c</th><th>v</th><th>b</th><th>n</th><th>m</th><th>,</th><th>.</th><th>/</th><th></th><th></th><th>?</th><th>SPC</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td></td><td></td><td>vc-rollback</td><td>vc-<span class="symb big1">&#x27F9;</span>-action</td><td>vc-switch-backend</td><td></td><td>vc-merge</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</span></table></span>
+</div>
+
+<hr>
+<div class="compact-sect"><div class="compact-sect">
+<a name="pk-8"><h2>C-x X</h2></a>
+<table class="bk-table">
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>SPC</th><th>=</th><th>a</th><th>b</th><th>c</th><th>g</th><th>q</th><th>t</th><th>u</th><th>w</th><th>x</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td>edebug-step-mode</td><td>edebug-display-freq-count</td><td>abort-recursive-edit</td><td>edebug-set-breakpoint</td><td>edebug-continue-mode</td><td>edebug-go-mode</td><td>top-level</td><td>edebug-trace-mode</td><td>edebug-unset-breakpoint</td><td>edebug-where</td><td>edebug-set-conditional-breakpoint</td></tr>
+<tr class="mod-row mod-s"><th class="mod-cell">S</th><td></td><td></td><td></td><td></td><td>edebug-Continue-fast-mode</td><td>edebug-Go-nonstop-mode</td><td>edebug-top-level-nonstop</td><td>edebug-Trace-fast-mode</td><td></td><td>edebug-toggle-save-windows</td><td>edebug-set-global-break-condition</td></tr>
+</span></table></div>
+
+<hr>
+<div class="simple-sect"><div class="simple-sect">
+<a name="pk-13"><h2>C-x ESC</h2></a>
+<table>
+<tr><th>:</th><td>repeat-complex-command</td><td class="col-sep">&nbsp;</td><th>ESC</th><td>repeat-complex-command</td></tr>
+<tr><th>ESC</th><td>repeat-complex-command</td><td class="col-sep" colspan=3></td></tr>
+</table>
+</div>
+
+<hr>
+<div class="full-sect">
+<a name="pk-15"><h2>C-x C-k</h2></a>
+<span class="full-gr">
+<h3>Main</h3>
+<table class="bk-table">
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>`</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>0</th><th>-</th><th>=</th><th>Backspace</th></tr>
+</span><tr class="between-blocks"><td colspan=15></td></tr>
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>~</th><th>!</th><th>@</th><th>#</th><th>$</th><th>%</th><th>^</th><th>&amp;</th><th>*</th><th>(</th><th>)</th><th>_</th><th>+</th></tr>
+</span><tr class="between-blocks"><td colspan=14></td><td class="overhang" colspan=3></td></tr>
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>q</th><th>w</th><th>e</th><th>r</th><th>t</th><th>y</th><th>u</th><th>i</th><th>o</th><th>p</th><th>[</th><th>]</th><th>&#92;</th><th>{</th><th>}</th><th>|</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td>kbd-macro-query</td><td></td><td>edit-kbd-macro</td><td>apply-macro-to-region-lines</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="mod-row mod-c"><th class="mod-cell">C</th><td></td><td></td><td>kmacro-edit-macro-repeat</td><td></td><td>kmacro-swap-ring</td><td></td><td></td><td>kmacro-insert-counter</td><td></td><td>kmacro-cycle-ring-<span class="symb big1">&#x27F8;</span></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</span><tr class="between-blocks"><td colspan=17></td></tr>
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>a</th><th>s</th><th>d</th><th>f</th><th>g</th><th>h</th><th>j</th><th>k</th><th>l</th><th>;</th><th>&#39;</th><th>:</th><th>&quot;</th><th>Return</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td></td><td>kmacro-start-macro</td><td></td><td></td><td></td><td></td><td></td><td></td><td>kmacro-edit-lossage</td><td></td><td></td><td></td><td></td><td>kmacro-edit-macro</td></tr>
+<tr class="mod-row mod-c"><th class="mod-cell">C</th><td>kmacro-add-counter</td><td>kmacro-start-macro</td><td>kmacro-<span class="symb big1">&#x232B;</span>-ring-head</td><td>kmacro-set-format</td><td></td><td></td><td></td><td>kmacro-end-or-call-macro-repeat</td><td>kmacro-call-ring-2nd-repeat</td><td></td><td></td><td></td><td></td><td></td></tr>
+</span><tr class="between-blocks"><td colspan=15></td></tr>
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>z</th><th>x</th><th>c</th><th>v</th><th>b</th><th>n</th><th>m</th><th>,</th><th>.</th><th>/</th><th></th><th></th><th>?</th><th>SPC</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td></td><td></td><td></td><td></td><td>kmacro-bind-to-key</td><td>kmacro-name-last-macro</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>kmacro-step-edit-macro</td></tr>
+<tr class="mod-row mod-c"><th class="mod-cell">C</th><td></td><td></td><td>kmacro-set-counter</td><td>kmacro-view-macro-repeat</td><td></td><td>kmacro-cycle-ring-<span class="symb big1">&#x27F9;</span></td><td>kmacro-edit-macro</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</span></table></span>
+</div>
+
+<hr>
+<div class="compact-sect"><div class="compact-sect">
+<a name="pk-14"><h2>C-x RET</h2></a>
+<table class="bk-table">
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>&#92;</th><th>c</th><th>f</th><th>k</th><th>l</th><th>p</th><th>r</th><th>t</th><th>x</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td></td><td>universal-coding-system-argument</td><td>set-buffer-file-coding-system</td><td>set-keyboard-coding-system</td><td>set-language-environment</td><td>set-buffer-process-coding-system</td><td>revert-buffer-with-coding-system</td><td>set-terminal-coding-system</td><td>set-selection-coding-system</td></tr>
+<tr class="mod-row mod-s"><th class="mod-cell">S</th><td></td><td></td><td>set-file-name-coding-system</td><td></td><td></td><td></td><td></td><td></td><td>set-<span class="symb big1">&#x27F9;</span>-selection-coding-system</td></tr>
+<tr class="mod-row mod-c"><th class="mod-cell">C</th><td>set-input-method</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</span></table></div>
+
+<hr>
+<div class="compact-sect"><div class="compact-sect">
+<h2>M-g</h2>
+<table class="bk-table">
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>[</th><th>g</th><th>n</th><th>p</th><th>ESC</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td></td><td>goto-line</td><td><span class="symb big1">&#x27F9;</span>-error</td><td><span class="symb big1">&#x27F8;</span>-error</td><td class="keymap"><a href="#pk-1">keymap</a></td></tr>
+<tr class="mod-row mod-c"><th class="mod-cell">C</th><td class="keymap"><a href="#pk-1">keymap</a></td><td></td><td></td><td></td><td></td></tr>
+<tr class="mod-row mod-m"><th class="mod-cell">M</th><td></td><td>goto-line</td><td><span class="symb big1">&#x27F9;</span>-error</td><td><span class="symb big1">&#x27F8;</span>-error</td><td></td></tr>
+</span></table></div>
+
+<hr>
+<div class="simple-sect"><div class="simple-sect">
+<a name="pk-1"><h2>M-g ESC</h2></a>
+<table>
+<tr><th>g</th><td>goto-line</td><td class="col-sep">&nbsp;</td><th>p</th><td><span class="symb big1">&#x27F8;</span>-error</td></tr>
+<tr><th>n</th><td><span class="symb big1">&#x27F9;</span>-error</td><td class="col-sep" colspan=3></td></tr>
+</table>
+</div>
+
+<hr>
+<div class="compact-sect"><div class="compact-sect">
+<h2>M-o</h2>
+<table class="bk-table">
+<span class="one-block"><tr class="bk-row"><th class="mod-cell"></th><th>[</th><th>b</th><th>d</th><th>i</th><th>l</th><th>o</th><th>s</th><th>u</th><th>ESC</th></tr>
+<tr class="mod-row unmod"><th class="mod-cell">&nbsp;</th><td></td><td>(&quot;bold&quot; . facemenu-set-bold)</td><td>(&quot;default&quot; . facemenu-set-default)</td><td>(&quot;italic&quot; . facemenu-set-italic)</td><td>(&quot;bold-italic&quot; . facemenu-set-bold-italic)</td><td>(&quot;Other...&quot; . facemenu-set-face)</td><td></td><td>(&quot;underline&quot; . facemenu-set-underline)</td><td class="keymap"><a href="#pk-2">keymap</a></td></tr>
+<tr class="mod-row mod-c"><th class="mod-cell">C</th><td class="keymap"><a href="#pk-2">keymap</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="mod-row mod-m"><th class="mod-cell">M</th><td></td><td></td><td></td><td></td><td></td><td>font-lock-fontify-block</td><td>center-line</td><td></td><td></td></tr>
+<tr class="mod-row mod-S-M"><th class="mod-cell">S-M</th><td></td><td></td><td></td><td></td><td></td><td></td><td>center-<span class="symb big1">&#x00B6;</span></td><td></td><td></td></tr>
+</span></table></div>
+
+<hr>
+<div class="simple-sect"><div class="simple-sect">
+<a name="pk-2"><h2>M-o ESC</h2></a>
+<table>
+<tr><th>o</th><td>font-lock-fontify-block</td><td class="col-sep">&nbsp;</td><th>S</th><td>center-<span class="symb big1">&#x00B6;</span></td></tr>
+<tr><th>s</th><td>center-line</td><td class="col-sep" colspan=3></td></tr>
+</table>
+</div>
+
+<hr>
+<div class="simple-sect"><div class="simple-sect">
+<h2>M-s</h2>
+<table>
+<tr><th>h</th><td class="keymap"><a href="#pk-3">keymap</a></td><td class="col-sep">&nbsp;</td><th>w</th><td>isearch-<span class="symb big2">&#x21D1;</span>-word</td></tr>
+<tr><th>o</th><td>occur</td><td class="col-sep" colspan=3></td></tr>
+</table>
+</div>
+
+<hr>
+<div class="simple-sect"><div class="simple-sect">
+<a name="pk-3"><h2>M-s h</h2></a>
+<table>
+<tr><th>f</th><td>hi-lock-find-patterns</td><td class="col-sep">&nbsp;</td><th>r</th><td>highlight-regexp</td></tr>
+<tr><th>l</th><td>highlight-lines-matching-regexp</td><td class="col-sep">&nbsp;</td><th>u</th><td>unhighlight-regexp</td></tr>
+<tr><th>p</th><td>highlight-phrase</td><td class="col-sep">&nbsp;</td><th>w</th><td>hi-lock-write-interactive-patterns</td></tr>
+</table>
+</div>
+
+<hr>
+<div class="simple-sect"><div class="simple-sect">
+<h2>M-ESC</h2>
+<table>
+<tr><th>:</th><td>eval-expression</td><td class="col-sep">&nbsp;</td><th>ESC</th><td>keyboard-escape-quit</td></tr>
+<tr><th>ESC</th><td>keyboard-escape-quit</td><td class="col-sep" colspan=3></td></tr>
+</table>
+</div>
+
+<hr>
+<div class="legend"><h2>Legend</h2><table>
+<tr><th>left</th><td><span class="symb big2">&#x27F5;</span></td><td class="col-sep">&nbsp;</td><th>next</th><td><span class="symb big1">&#x27F9;</span></td></tr>
+<tr><th>right</th><td><span class="symb big2">&#x27F6;</span></td><td class="col-sep">&nbsp;</td><th>previous</th><td><span class="symb big1">&#x27F8;</span></td></tr>
+<tr><th>up</th><td><span class="symb big2">&#x2191;</span></td><td class="col-sep">&nbsp;</td><th>paragraph</th><td><span class="symb big1">&#x00B6;</span></td></tr>
+<tr><th>down</th><td><span class="symb big2">&#x2193;</span></td><td class="col-sep">&nbsp;</td><th>tab</th><td><span class="symb big2">&#x21B9;</span></td></tr>
+<tr><th>digit-argument</th><td><span class="symb big1">&#x2460;</span></td><td class="col-sep">&nbsp;</td><th>kill</th><td><span class="symb big1">&#x2327;</span></td></tr>
+<tr><th>forward</th><td><span class="symb big2">&#x21D1;</span></td><td class="col-sep">&nbsp;</td><th>delete</th><td><span class="symb big1">&#x232B;</span></td></tr>
+<tr><th>backward</th><td><span class="symb big2">&#x21D3;</span></td><td class="col-sep" colspan=3></td></tr>
+</table>
+</div>
+</body></html>

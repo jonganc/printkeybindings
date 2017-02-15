@@ -1,0 +1,24 @@
+;; These package prints the accessible keymaps in a pretty format. 
+
+;; Short usage guide:
+;; Run: (pkb-html-save-keymap KEYMAP OUTPUT-FILE-NAME).
+
+;; Note about output: The html currently uses CSS 3, so it won't look good in older web browsers. Sorry.
+
+;; Customizing:
+;; The functions are designed so that the output can be extensively customized to adapt to the end-user's desires. Look at the help function for `pkb-html-save-keymap' for more info.
+
+;; Design philosophy:
+;; The package is actually split into two parts, pkb and pkb-output. The first part contains a set of functions that extract the key-bindings and assemble them into a useful format; the second part interfaces with pkb to turn the key-bindings into pretty output. Generally, the end-user will call a function in the second part. Currently, pkb-output = pkb-html, i.e. the output is in html. However, since much of the logic is contained separately in pkb, it shouldn't be to hard to edit the code to make, e.g. pk-latex, which would output in LaTeX format.
+
+;; Here is a slightly more explicit codification of the design philosophy: 
+;; 1) If a task is sufficiently general that it would be useful for generating outputting in more than one format it should be placed as a function(s) in pkb rather than pkb-output.
+;; 2) If there is a subtask in a function in pkb and different applications or users might reasonably want that subtask to behave in very different ways, that subtask may need to be split off as a separate function so that each application or user can perform that subtask according to his needs.
+;;   2a) It is OK if the new function (generated from the subtask) is rather abstract or not entirely self-contained logically as long as splitting it off provides useful customization options. As a result, a function in pkb-output may need to call several functions in pkb to accomplish some task and may also need to stitch together low-level or intermediate data. This is OK.
+;;   2b) On the other hand, if all reasonable desired behaviors can be handled elegantly by passing an argument to the original function, the subpart does not need to be and should not be split off.
+
+;; Why this philosophy? I'm somewhat indecisive and I'm not entirely sure how the output should look. So I designed the underlying code to be very adaptable.
+
+;; To improve:
+;; 1) Appearance of output could be made much prettier. I haven't spent too much time on this.
+;; 2) (technical issue) pkb-transl-... should be done before rather than during  `pkb-categorize-key-list' for conceptual simplicity

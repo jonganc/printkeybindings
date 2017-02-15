@@ -1,0 +1,113 @@
+[Written on 16/06/02]
+
+I am putting this project behind me for a while so I am going to summarize were I am and what I've done.
+
+* what I was doing immediately before stopping
+
+I just finished `pkb-map-keymap-items', `pkb-list-keymap-symbols'. My basic program and thinking was about how to improve the information presented to users so that they could understand in which keymaps bindings were defined. It seems like it might be nice if the output somehow showed (perhaps using a small, second, always-on-top window, like in ediff-mode) in which keymap variable the bindings were contained.
+
+* the files
+
+** main files
+
+The files with the program
+
+*** pkb.el
+
+The main functionality, particularly w.r.t. to processing emacs keymaps.
+
++ I made `pkb-map-keymap-meta-chars-in-esc-prefix' to be used in functions analyzing keymaps. I mean to incorporate it into the previous workflow.
+
++ I wanted to eventually use object-oriented programing (i.e. EIEIO) and/or structures (i.e. cl-defstruct) for improving the earlier code I wrote. In particular, my orginal code used a (somewhat makeshift) system of using list/cons cells in different ways to pass around and distinguish modified keys, base keys, etc. However, I may be also to simplify and clarify the programming by using abstractions like structures and/or classes.
+
++ I most recently added `pkb-list-keymap-symbols' (and `pkb-map-keymap-items' in the process). My goal is to make a suite of functions that let me analyze keymaps and identify . I was thinking about making another function using `pkb-map-keymap-items' to replace `map-keymap' in the main functionality so that I might (as I mention in [[what I was doing immediately before stopping]]) show in which keymap variable (e.g. `emacs-lisp-mode-map') bindings are contained.
+
++ I intended to go through the functions here, debugging, improving implementations, and implementing the ideas mentioned.
+
++ I recently (in the most recent edits.) added:
+pkb-push-end
+pkb-append-elt
+pkb-vconcat-elt
+pkb-character-code-to-escape-syntax
+pkb-map-keymap-meta-chars-in-esc-prefix
+pkb-print-event
+pkb-print-keymap
+pkb-map-keymap-items
+pkb-list-keymap-symbols
+
+*** pkb-output.el
+
+Functions for outputting/displaying the processed keymaps.
+
+*** ~/JonsData/AppSpecific/emacs/common/my-programming-settings-to_edit.el
+
+My working file for editing "my-programming-settings.el". 
+
++ I wanted a set of printing functions useful for printing command / text. There are several functions in pkb.el that I want to load regularly eventually anyway; I may simply load pkb.el always.
+
++ I added / significantly altered recently:
+push-end
+with-output-to-current-buffer
+prin1-to-current-buffer
+pp-to-current-buffer
+apply-map-function
+print-using-map-function-to-current-buffer
+print-keymap
+pr-keymap-buf
+pr-in-map
+query-replace-general
+perform-replace-region-aware
+concat=
+
+
+** debugging files
+
+I was in the process of converting these files to contain `ert-deftest' constructs that can be used to verify my implementation of my ideas. 
+
+*** debug-pkb.el
+
+I intially wrote the ert tests contained in the file. I had started writing one for `pkb-translate-events' when I realized that I needed to better understand how the scripts in pkb.el worked (I hadn't worked on it in years) and to figure a more effective debugging method. 
+
+I ended up writing `pkb-make-test-keymap' (and `pkb-join-symbs-to-symb' in the process) so that I would have a way of making consistent test keymaps for using in ert tests. I have not yet incorporated this function into the existing ert tests but eventually intend to, when reasonable.
+
+You can see vestiges (e.g. look for ";; PKB-SPLIT-FULL-TO-GROUPS") of the initial, very basic method of checking that my functions worked, before I transitioned to using ert.
+
+*** debug-pkb-output.el
+
+Should eventually be like `debug-pkb.el' for output functions but I haven't started adjusting this yet
+
+** documentation
+
+*** descript.org
+
+This file contains documentation that was originally in the inital comments in pkb.el and pkb-output.el. Once I have fixed up the code and adjusted the functionality, I should adjust this as well.
+
+** misc for development
+
+*** pkb-notes.org
+
+My organized notes about relevant questions, notes, and functions. Called "useful-commands.org" at one point.
+
+*** pkb-thoughts.org
+
+My working notes file, containing only loosely organized thoughts and questions. Called "pkb-thoughts.org" at one opoint.
+
+*** pkb-current-situation.org
+
+This document.
+
+*** pkb-unused.el
+
+This file contains functions that were originally in pkb.el (and maybe in pkb-output.el, though I don't think any were) but that weren't being using
+
+*** todo.txt
+
+This was leftover from the original programming phase. I haven't really looked at what is in here so I don't know if these are still problems and/or if they are relevant.
+
+*** elisp-scraps.org
+
+Random and possibly never-again-useful scraps of elisp that I used at one point or another.
+
+* other
+
+I recently read about common lisp extensions and EIEIO (Enhanced Implementation of Emacs Interpreted Objects). I have been trying to incorporate these since they seem fun and useful.

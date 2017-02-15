@@ -1,0 +1,35 @@
+We can have untranslated events, translation destinations can fall into the
+following categories
+
+** bk in char-table
+e.g. [?1]
+** bk not in char-table
+e.g. [next]
+
+** event in char-table
+*** event has no modifiers
+e.g. [?1]
+*** event has modifiers
+e.g. [?\C-l]
+
+** event not in char-table
+*** event has no modifiers
+e.g. [next]
+*** event has modifiers
+e.g. [C-next]
+
+
+We can have untranslated events, translation destinations can fall into the
+following categories
+
+  + bk allowed in char-table (bk-ct): e.g. ?1
+  + bk never in char-table (bk-n-ct): e.g. next
+
+  + event allowed in char-table
+    - event has no modifiers (ev-ct-n-mod): e.g. ?1
+    - event has modifiers (ev-ct-mod): e.g. ?\C-l
+
+  + event never in char-table
+    - event has no modifiers (ev-n-ct-n-mod) : e.g. next
+    - event has one modifier (ev-n-ct-1-mod): e.g. C-next
+    - event has multiple modifier (ev-n-ct-1-mod): e.g. C-next

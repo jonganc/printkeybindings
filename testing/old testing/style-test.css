@@ -1,0 +1,149 @@
+body,table
+{
+font-size:11px
+}
+
+table
+{
+padding:0px;
+margin:0px;
+word-wrap: break-word;
+}
+
+.full-sect
+{
+max-width:10.5in;
+}
+
+.bk-table
+{
+border-collapse: collapse;
+/* table-layout:fixed; */
+}
+
+.bk-table td, .bk-table th
+{
+max-width:60px;
+/* max-height:1000px; */
+}
+
+.bk-table td
+{
+min-width:40px;
+/* width:60px; */
+}
+
+.simple-sect table, .legend table
+{
+border-collapse: collapse;
+}
+
+.simple-sect td, .legend td
+{
+border:1px solid black;
+}
+
+td, th
+{
+border:1px solid black;
+}
+
+/* .bk-table td, .bk-table th */
+/* { */
+/* border-bottom:1px dashed black; */
+/* } */
+
+td.col-sep
+{
+border:0px solid black;
+}
+
+/* .bk-row th */
+/* { */
+/* border-left:1px solid black; */
+/* border-right:1px solid black; */
+/* border-top:2px solid black; */
+/* } */
+
+/* .mod-cell th */
+/* { */
+/* border-bottom:1px solid black; */
+/* } */
+
+.bk-table tbody:first-of-type tr:first-of-type th
+{
+border-top:2px solid black;
+}
+
+.bk-table tr:nth-of-type(2) td, .bk-table tr:nth-of-type(2) th
+{
+border-top:2px solid green;
+}
+
+/* .bk-table tbody tr:last-of-type td, .bk-table tbody tr:last-of-type th */
+.bk-table tbody:last-of-type tr:last-of-type td, .bk-table tbody:last-of-type tr:last-of-type th
+{
+border-bottom:2px solid black;
+}
+
+.bk-table tr th:first-of-type
+ {
+border-left:2px solid black;
+}
+
+.bk-table td:last-of-type, .bk-table th:last-of-type, .bk-table th:first-of-type
+{
+border-right:2px solid black;
+}
+
+/* th.empty-col, td.empty-col */
+/* { */
+/* border:0px; */
+/* } */
+
+table.bk-table tr.between-blocks td
+{
+/* border-top:0px; */
+/* border-bottom:0px; */
+border-left:2px solid black;
+/* border-left:0px; */
+border-right:2px solid black;
+color: #f00;
+background-color: #f00;
+}
+
+hr
+{
+margin-top:20px;
+/* color: #f00; */
+/* background-color: #f00; */
+color: yellow;
+background-color: yellow;
+border:1px solid black;
+height: 3px;
+}
+
+.symb
+{
+
+}
+
+.big1
+{
+font-size:14px;
+}
+
+.big2
+{
+font-size:16px;
+}
+
+.big3
+{
+font-size:18px;
+}
+
+.big4
+{
+font-size:20px;
+}
