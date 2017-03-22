@@ -1,1 +1,0 @@
-(((fundamental-mode . ignore) . 1) ((fundamental-mode . mouse-set-point) . 1) ((fundamental-mode . mouse-drag-region) . 2))
